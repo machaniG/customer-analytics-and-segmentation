@@ -10,7 +10,15 @@ The analysis uncovered that 27% of customers were generating 80% of annual reven
 Out of 8 segments for repeat buyers, the top two key revenue drivers (Whale Mass & Whale Mid-Tier) contribute 67% of the company’s annual revenue. These same segments have highest return rates (2.5% & 9.7, respectively), generating 87% of all product returns. Reducing return friction could drive meaningful revenue growth.
 I identified 23 one-off Whales and recommend improving onboarding and follow-up engagement for these high-spending new customers to increase customer life value.
 
-**Customer Segmentation Matrix**
+---
+
+### Data Cleaning
+    - 525,461 transactional data was cleaned 
+    - mapped into ~4,300 customers
+        - 2,893 repeat customers
+    - Churn defined as 90 days of inactivity
+
+### Customer Segmentation Matrix
 
 I did a three-dimensional customer diagnostic combining:
 - Pareto revenue segmentation
@@ -21,43 +29,69 @@ I did a three-dimensional customer diagnostic combining:
 
  ![customer matrix](assets/customer-matrix.png)
  
-_______
+---
 
 ## Key Findings
 
-### The Core Business Problem
+## There Business Model Has Two Revenue Engines
+Revenue comes from two mechanisms.
 
-**Low Frequency High Volume Returns**
-A small group of high value customers (317 Whale Mid-Tier) who drive 22% of the company's annual revenue are exposed to operational failures that threaten long-term stability. Although churn exists at an overa rate of 21.9%, most churn occurs among low value customers who contribute relatively little to total revenue. Therefore, the real risk lies in **revenue concentration and operational friction**.
+1. **High value transactions**
+- Elite Wholesale + Frequent Champions + Whale Mid-Tier (34.3% of total revenue; £7,663, £1,897, & £859 AOV, respectively)
 
-**High Frequency low Volume Returns**
-Besides, the business is also experiencing high frequency small returns primarily from Low Value Mass customers. These returns create administrative overhead through thousands of service interactions. 
+2. **High frequency repeat purchasing**
+- Whale Low Value Mass (45% of total revenue, £424 AOV)
 
-- Taken together, the bulk returns create the largest financial burden, while Low Value Mass customers create the largest operational workload.
+**Implication**
 
-- Reducing Mid-Tier Whales Friction to 2.5% alone create an estimated £231,405 annual opportunity through improved quality control, product description, and product fit guidance.
+Growth strategies should differentiate between relationship management and repeat purchasing incentives.
+
+![AOV vs purchase frequency](assets/scatter.png)
+
 ---
-### A Small Group of Customers Generates the Majority of Revenue
+
+## A Small Group of Customers Generates the Majority of Revenue
 
 Revenue concentration is extreme. 
 - 27% of customers generate **~80% of revenue** (**£7,038,261**)
 - 847 customers alone drive **45% of total revenue** (**£3,976,955**)
 - The largest contributors are Whale Low Value Mass (45%) and Whale Mid-Tier (22%)
 
+![revenue share by segment](assets/revenue_share.png)
 
 
 **Strategic Implication**
 
-The company’s growth and revenue stability depend heavily on a relatively small group of buyers. Protecting and expanding these relationships should be a strategic priority.
+The company’s revenue stability depend heavily on a relatively small group of buyers. Protecting and expanding these relationships should be a strategic priority.
 ____
+
+## Operational Friction
 
 ### Operational Issues Are Concentrated Among the Most Valuable Customers
 
 Operational inefficiencies are concentrated in the company’s core revenue segment. The two segments responsible for most revenue (Whale Mid-Tier and Low Value Mass Market) also generate **87% of return volume** (182,657 items)
 
-Versatile Mid-Tier Whale customers show the highest operational friction.
+![return volume by segment](assets/return_volume.png)
+
+
+**Business Implication**
+
+Operational improvements in these segments could simultaneously:
+- reduce cost
+- improve customer satisfaction
+- protect high-value revenue streams
+
+----
+
+### Return Rate Diagnostic
+
+![return rate by segment](assets/return_rate.png)
+
+**Insights**
+
+Versatile Mid-Tier Whale customers show the highest return rates.
 - 9.65% return rate, nearly 4× higher than other whale segments
-- ~8% revenue leakage
+- ~8% revenue leakage (see revenue leakage below)
 - Yet it generates 22% of revenue (£1,937,654).
 
 This suggests potential issues with:
@@ -67,33 +101,45 @@ This suggests potential issues with:
 - Product quality or specification clarity
 - Order complexity
 
+**Strategic Implication**
+
+Reducing return drivers in this segment represents the largest operational efficiency opportunity in the customer base.
+
+---
+
+## High-quality revenue in Long-Tail Mid-Tier
+
+This segment shows:
+- highest revenue efficiency (0.988)
+- lowest return rates (0.72%)
+
 **Business Implication**
 
-Operational improvements in these segments could simultaneously:
-- reduce cost
-- improve customer satisfaction
-- protect high-value revenue streams
----
+These customers produce very clean revenue and could represent a target for growth initiatives.
 
 **Revenue share and Leakage**
 
-| Segment |	Customers | Revenue Share | Purchase Rate | AOV | Monthly Revenue per Customer | Return Rate | Revenue Leakage |
-| ----------- | ------------------| ---------- | -----------| ---------| -------------| -------------| ------|
-| Whale Frequent Champions | 5 |	12.25% | 9.26 | £1,897 | £17,571 | 1.62% | 3.99% |
-| Whale Elite Wholesale Giants | 2 | 0.52% | 1.91 | £7,663 | £14,673 | 0.82% | 8.01% |
-| Whale Low Value Mass | 847 |	45.20% | 1.21 | £424 | £512 | 2.47% | 4.25% |
-| Whale Versatile Mid-Tier | 317 | 22.02% | 0.98 | £859 | £843 | 9.65% | 7.97% |
-| Long-Tail Versatile Mid-Tier | 426 | 3.57% | 0.79 | £405 | £322 | 0.72% | 1.18% |
-| Long-Tail Low Value Mass | 2715 |	16.44% | 0.75 | £232 | £174 | 1.71% | 3.24% |
+| Segment |	Customers | Revenue Share | Purchase Rate | AOV | Monthly Revenue per Customer | Return Rate | Revenue Leakage | Net / Gross Ratio|
+| ----------- | ------------------| ---------- | -----------| ---------| -------------| -------------| ------| ----|
+| Whale Frequent Champions | 5 |	12.25% | 9.26 | £1,897 | £17,571 | 1.62% | 3.99% | 0.96 |
+| Whale Elite Wholesale Giants | 2 | 0.52% | 1.91 | £7,663 | £14,673 | 0.82% | 8.01% | 0.92|
+| Whale Low Value Mass | 847 |	45.20% | 1.21 | £424 | £512 | 2.47% | 4.25% | 0.96 |
+| Whale Versatile Mid-Tier | 317 | 22.02% | 0.98 | £859 | £843 | 9.65% | 7.97% | 0.92 |
+| Long-Tail Versatile Mid-Tier | 426 | 3.57% | 0.79 | £405 | £322 | 0.72% | 1.18% | 0.99 |
+| Long-Tail Low Value Mass | 2715 |	16.44% | 0.75 | £232 | £174 | 1.71% | 3.24% | 0.97 |
 
 ____
-### High-Spending First-Time Buyers Are Not Converting Into Long-Term Customers
+
+## High-Spending First-Time Buyers Are Not Converting Into Long-Term Customers
 
 A subset of customers (23 one_off Whales) makes extremely high-value first purchases but never returns. These buyers already demonstrate strong purchasing power but fail to convert into long-term customers, effectively 'leaking' high-potential LTV (Lifetime Value) at the very first touchpoint.
+
+![The onboarding and Churn Leakage Gap](assets/retention_funner.png)
 
 **Strategic Recommendation**
 
 Improving onboarding and post-purchase engagement could unlock significant additional LTV.
+
 _____
 
 ## Primary Growth Levers
