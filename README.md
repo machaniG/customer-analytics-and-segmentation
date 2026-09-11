@@ -7,7 +7,9 @@ This project aimed to understand who our customers are, how their behaviors diff
 I processed 500K+ raw transactions and created customer features, then conducted a three-dimensional customer diagnostic combining Pareto revenue segmentation, K-means behavioural clustering, and lifecycle classification (active, churned, one-off) in Python.
 
 The analysis uncovered that 27% of customers were generating 80% of annual revenue. The Frequent buyers segment consists of only 5 all active customers who generate 12.3% of annual revenue with 9.3 purchase rate and £17,571 monthly revenue per customer. Protect and maintain personal relationships with these high value loyal customers.
+
 Out of 8 segments for repeat buyers, the top two key revenue drivers (Whale Mass & Whale Mid-Tier) contribute 67% of the company’s annual revenue. These same segments have highest return rates (2.5% & 9.7, respectively), generating 87% of all product returns. Reducing return friction could drive meaningful revenue growth.
+
 I identified 23 one-off Whales and recommend improving onboarding and follow-up engagement for these high-spending new customers to increase customer life value.
 
 ---
@@ -63,7 +65,8 @@ Revenue concentration is extreme.
 **Strategic Implication**
 
 The company’s revenue stability depend heavily on a relatively small group of buyers. Protecting and expanding these relationships should be a strategic priority.
-____
+
+---
 
 ## Operational Friction
 
@@ -128,25 +131,26 @@ These customers produce very clean revenue and could represent a target for grow
 | Long-Tail Versatile Mid-Tier | 426 | 3.57% | 0.79 | £405 | £322 | 0.72% | 1.18% | 0.99 |
 | Long-Tail Low Value Mass | 2715 |	16.44% | 0.75 | £232 | £174 | 1.71% | 3.24% | 0.97 |
 
-____
+---
 
 ## High-Spending First-Time Buyers Are Not Converting Into Long-Term Customers
 
 A subset of customers (23 one_off Whales) makes extremely high-value first purchases but never returns. These buyers already demonstrate strong purchasing power but fail to convert into long-term customers, effectively 'leaking' high-potential LTV (Lifetime Value) at the very first touchpoint.
 
-![The onboarding and Churn Leakage Gap](assets/retention_funner.png)
+![The onboarding and Churn Leakage Gap](assets/retention_funnel.png)
 
 **Strategic Recommendation**
 
 Improving onboarding and post-purchase engagement could unlock significant additional LTV.
 
-_____
+----
 
 ## Primary Growth Levers
 
 1. Operational cost saving opportunity in high return segments by improving customer experience can reduce returns and drive revenue growth.
 2. Converting high-spending first-time buyers into long-term customers through post-purchase engagement to increase LTV.
-______
+
+---
 
 ## Strategic Recommendations
 
@@ -198,7 +202,8 @@ Potential actions:
 **Business Outcome**
 
 Increase repeat purchases and expand the active customer base.
-______
+
+----
 
 ## Revenue Opportunity Estimate
 
@@ -210,7 +215,8 @@ Targeted improvements can unlock meaningful revenue gains without increasing cus
 | Versatile Mid-Tier Whales (256 active customers) | Convert 6% into Frequent Champions | Expand loyal champion customers to 20, increasing monthly revenue by 400%|
 | Versatile Mid-Tier Whales | Reduce return friction to 2.5% | 72,089 items would no longer be returned, saving up to £231,405 annually in reclaimed revenue + operational costs|
 | High-spending new customers (23 one-off Whales) | Convert 7 to 10 into repeat buyers |Increase customer LVT up to 7 times, gaining £86,103 to £153,072 additional revenue annually|
-____
+
+----
 
 ## Data Analysis Steps 
 
@@ -251,7 +257,7 @@ This helped answer: *How do customers behave?*
 Repeat customers were classified into **churned or active** based on a 90 days recency threshold while those with a frequency of one were labelled **one-off**.
 - This helped answer: *What fraction of the company's most valuable customers is still active?*          
 
-_____
+----
 
 ## Recommended Immediate Actions
 
@@ -276,7 +282,8 @@ Bulk order fulfillment errors in the mid tier segment are the largest operationa
 Implement personalized onboarding for high value first time buyers.
 
 Target mid tier long tail customers with retention campaigns to convert them into high value customers.
-_____
+
+----
 
 # Next Phase (V2)
 
